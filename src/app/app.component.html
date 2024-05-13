@@ -1,0 +1,114 @@
+<div class="main">
+  <div class="slide-bar">
+    <p style="margin-top: 40px; font-size: 30px; font-weight: bold;">Platform</p>
+    <div class="bar">
+      <p><mat-icon>dashboard</mat-icon> Dashboard</p>
+      <p><mat-icon>profile</mat-icon> Connect</p>
+      <p><mat-icon>description</mat-icon> Report</p>
+      <p><mat-icon>settings</mat-icon> Settings</p>
+    </div>
+
+  </div>
+  <div class="main-class">
+    <div class="main-class-1">
+      <nav>
+        <ul>
+          <li>Daily</li>
+          <li>Total Runnings $54.36</li>
+          <li>Total spent <span>$21.63</span></li>
+          <li>Total Posts 72</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="date-class">
+      <div class="main-class-2">
+        <li>Overall</li>
+        <li>{{country}}</li>
+        <li>Platform 02</li>
+        <li>Platform 03</li>
+      </div>
+      <div class="box">
+        <div class="date-class-1">
+          <mat-date-range-input [rangePicker]="picker">
+            <input placeholder="Date" matStartDate (click)="picker.open()" class="date-input"
+              [value]="startDate | date: 'dd/MM/yyyy'">
+            <input matEndDate (click)="picker.open()" [value]="endDate | date: 'dd/MM/yyyy'">
+          </mat-date-range-input>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </div>
+        <select class="date-class-2">
+          <option value="account1"> Select Account</option>
+          <option value="account2">Account 2</option>
+          <option value="account3">Account 3</option>
+        </select>
+      </div>
+    </div>
+    <div class="main-box">
+      <div class="sub-box">
+        <div class="login-card">
+
+          <div class="container">
+            <p>Total Views</p>
+            <p class="number">45</p>
+            <select class="month-class">
+              <option value="account1">Monthly</option>
+              <option value="account2">Daily</option>
+              <option value="account3">Weekly</option>
+            </select>
+          </div>
+
+
+          <img src="../assets/monthwise.png" style="height: 27vh; width: 26vw;">
+        </div>
+        <div class="sub-box-1">
+          <div class="card-2">
+            temp_f
+            <p class="number">{{temp}}</p>
+          </div>
+          <div class="card-2">
+            Total View Time
+            <p class="number">{{time}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-box-2">
+        <div class="card-2">
+          metrics 03
+          <p class="number">{{amount}}</p>
+        </div>
+        <div class="card-2">
+          Total Clicks
+          <p class="number">{{clicks}}</p>
+        </div>
+        <div class="card-2">
+          Number of Viewers
+          <p class="number">{{views}}</p>
+        </div>
+      </div>
+      <div class="login-card-1">
+        Top Categories
+
+        <div class="slider-container" #sliderContainer>
+          <div class="slider">
+            <div class="slide">
+              <img src="../assets/rainfall.png" style="height: 27vh; width: 22vw;">
+            </div>
+            <div class="slide">
+              <img src="../assets/month.png" style="height: 27vh; width: 22vw;">
+            </div>
+            <div class="slide">
+              <img src="../assets/japan.png" style="height: 27vh; width: 22vw;">
+            </div>
+          </div>
+        </div>
+        <div #dots class="navigation-buttons">
+          <span class="dot" (click)="changeSlide(0)" [class.active]="currentSlideIndex === 0"></span>
+          <span class="dot" (click)="changeSlide(1)" [class.active]="currentSlideIndex === 1"></span>
+          <span class="dot" (click)="changeSlide(2)" [class.active]="currentSlideIndex === 2"></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

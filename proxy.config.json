@@ -1,0 +1,11 @@
+{    
+"/api/v1/": {
+        "target": "http://api.weatherapi.com/v1",
+        "secure": false,
+        "changeOrigin": true,
+        "headers": {
+            "Connection": "keep-alive"
+        },
+        "logLevel": "debug"
+    }
+}
