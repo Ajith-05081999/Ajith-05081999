@@ -344,4 +344,16 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    .login-card-1 {
+        border-radius: 16px;
+        background: #F5F5F5;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 28px;
+        flex-shrink: 0;
+        width: 24.5vw;
+        height: 32vh;
+        position: relative;
+        width: 100%;
+    }
+
 }
