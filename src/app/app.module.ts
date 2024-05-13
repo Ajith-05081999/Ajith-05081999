@@ -11,9 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { CarouselSliderComponent } from './carousel-slider/carousel-slider.component';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, CarouselSliderComponent],
+  declarations: [AppComponent, CarouselSliderComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

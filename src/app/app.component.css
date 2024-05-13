@@ -1,13 +1,15 @@
+:host {
+    display: grid;
+    height: 100vh;
+}
+
 .main {
     background-color: rgb(255, 210, 217);
-
-    width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.15fr 0.85fr;
 }
 
 .slide-bar {
-    height: 150vh;
     width: 15vw;
     background-color: purple;
     border-top-right-radius: 70px;
@@ -31,6 +33,7 @@
     margin-top: 50px;
     font-size: 20px;
     row-gap: 10px;
+    text-align: left;
 }
 
 .bar>*:hover {
@@ -47,43 +50,20 @@
 
 
 
-.main-class-1 {
-    background-color: rgba(111, 2, 165, 0.803);
-    height: 40px;
-    width: 75vw;
-    border-radius: 30px;
-    margin-top: 200px;
-
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-
-}
 
 
-nav ul li {
-    margin: 0 5vw;
-    color: white;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 10px;
-}
 
 
 
 .date-class {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-end;
+    margin-top: 1rem;
 }
 
 .date-class-1 {
-    margin-top: 40px;
+
     background-color: rgb(248, 145, 133);
     color: white;
     height: 30px;
@@ -138,13 +118,13 @@ nav ul li {
 
 
 .main-class-2 {
-    margin-top: 80px;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: start;
-    align-content: start;
 
+    list-style-type: none;
+    /* padding: 0; */
+    display: grid;
+    /* justify-content: start; */
+    /* align-content: start; */
+    grid-template-columns: max-content max-content max-content max-content;
 }
 
 .box {
@@ -187,8 +167,7 @@ nav ul li {
 
 .sub-box {
     display: grid;
-    grid-template-rows: 1fr 5fr;
-
+    grid-row-gap: 1rem;
 }
 
 .sub-box-1 {
@@ -203,35 +182,33 @@ nav ul li {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 28px;
     flex-shrink: 0;
-    width: 24.5vw;
-    height: 32vh;
-
-
 }
 
 .container {
-    display: flex;
+    display: grid;
     align-items: center;
-
-
-
+    grid-auto-flow: column;
+    place-items: center;
+    grid-column-gap: 5rem;
 }
 
 .container p,
-.container select {
-    margin-right: 90px;
+.container select {}
 
 
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 1rem;
 }
-
-
-
 
 
 .main-box-2 {
     display: grid;
-    grid-template-rows: 5fr 5fr 50fr;
-    column-gap: 10px;
+    grid-column-gap: 1rem;
+    align-items: self-end;
 }
 
 .card-2 {
@@ -240,11 +217,10 @@ nav ul li {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 28px;
     flex-shrink: 0;
-    width: 10vw;
-    height: 10vh;
     display: grid;
     grid-template-rows: 1fr 1fr;
-
+    /* grid-gap: 2.2rem; */
+    margin-bottom: 1rem;
 }
 
 .metric {
@@ -277,6 +253,7 @@ nav ul li {
     overflow-x: scroll;
     white-space: nowrap;
     width: 100%;
+    /* Adjust width to take up full width */
     margin: auto;
 }
 
@@ -298,7 +275,7 @@ nav ul li {
 
     justify-content: center;
     align-items: flex-end;
-
+    /* Aligns the container and dots at the bottom */
 }
 
 .dot {
@@ -319,4 +296,52 @@ nav ul li {
     color: blueviolet;
     font-size: 30px;
     font-weight: bold;
+}
+
+
+@media only screen and (max-width: 1160px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 924px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .main-class-2 {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: max-content max-content;
+    }
+
+    .slide-bar {
+        width: 100%;
+        background-color: purple;
+        border-top-right-radius: 70px;
+        color: white;
+        text-align: center;
+        font-size: bold;
+    }
+
+    .main {
+        background-color: rgb(255, 210, 217);
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .bar {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        margin-top: 50px;
+        font-size: 20px;
+        row-gap: 10px;
+        text-align: left;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }

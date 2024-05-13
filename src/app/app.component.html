@@ -1,4 +1,5 @@
 <div class="main">
+
   <div class="slide-bar">
     <p style="margin-top: 40px; font-size: 30px; font-weight: bold;">Platform</p>
     <div class="bar">
@@ -7,19 +8,14 @@
       <p><mat-icon>description</mat-icon> Report</p>
       <p><mat-icon>settings</mat-icon> Settings</p>
     </div>
-
   </div>
-  <div class="main-class">
-    <div class="main-class-1">
-      <nav>
-        <ul>
-          <li>Daily</li>
-          <li>Total Runnings $54.36</li>
-          <li>Total spent <span>$21.63</span></li>
-          <li>Total Posts 72</li>
-        </ul>
-      </nav>
-    </div>
+
+  <!-- <div style="background-color: red;"></div> -->
+
+  <div style="display: grid; align-content: center; place-items: center; margin: 5% 5% 0% 5%; justify-items: start;">
+
+    <app-header></app-header>
+
     <div class="date-class">
       <div class="main-class-2">
         <li>Overall</li>
@@ -43,10 +39,11 @@
         </select>
       </div>
     </div>
-    <div class="main-box">
+
+    <div class="wrapper">
+
       <div class="sub-box">
         <div class="login-card">
-
           <div class="container">
             <p>Total Views</p>
             <p class="number">45</p>
@@ -56,9 +53,7 @@
               <option value="account3">Weekly</option>
             </select>
           </div>
-
-
-          <img src="../assets/monthwise.png" style="height: 27vh; width: 26vw;">
+          <img src="../assets/monthwise.png" style="height: 27vh; width: 26vw; margin-top: 1rem;">
         </div>
         <div class="sub-box-1">
           <div class="card-2">
@@ -71,6 +66,7 @@
           </div>
         </div>
       </div>
+
       <div class="main-box-2">
         <div class="card-2">
           metrics 03
@@ -85,30 +81,39 @@
           <p class="number">{{views}}</p>
         </div>
       </div>
-      <div class="login-card-1">
-        Top Categories
 
-        <div class="slider-container" #sliderContainer>
-          <div class="slider">
-            <div class="slide">
-              <img src="../assets/rainfall.png" style="height: 27vh; width: 22vw;">
-            </div>
-            <div class="slide">
-              <img src="../assets/month.png" style="height: 27vh; width: 22vw;">
-            </div>
-            <div class="slide">
-              <img src="../assets/japan.png" style="height: 27vh; width: 22vw;">
+      <div class="main-box">
+
+
+        <div class="login-card-1">
+          Top Categories
+
+          <div class="slider-container" #sliderContainer>
+            <div class="slider">
+              <div class="slide">
+                <img src="../assets/rainfall.png" style="height: 27vh; width: 22vw;">
+              </div>
+              <div class="slide">
+                <img src="../assets/month.png" style="height: 27vh; width: 22vw;">
+              </div>
+              <div class="slide">
+                <img src="../assets/japan.png" style="height: 27vh; width: 22vw;">
+              </div>
             </div>
           </div>
-        </div>
-        <div #dots class="navigation-buttons">
-          <span class="dot" (click)="changeSlide(0)" [class.active]="currentSlideIndex === 0"></span>
-          <span class="dot" (click)="changeSlide(1)" [class.active]="currentSlideIndex === 1"></span>
-          <span class="dot" (click)="changeSlide(2)" [class.active]="currentSlideIndex === 2"></span>
-        </div>
+          <div #dots class="navigation-buttons">
+            <span class="dot" (click)="changeSlide(0)" [class.active]="currentSlideIndex === 0"></span>
+            <span class="dot" (click)="changeSlide(1)" [class.active]="currentSlideIndex === 1"></span>
+            <span class="dot" (click)="changeSlide(2)" [class.active]="currentSlideIndex === 2"></span>
+          </div>
 
+        </div>
       </div>
     </div>
+
+
+
   </div>
+
 
 </div>
